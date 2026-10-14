@@ -1,0 +1,5 @@
+/packages.json
+/_site/
+/seed/*/target/
+/seed/*/vex.lock
+.DS_Store

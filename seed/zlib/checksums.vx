@@ -1,0 +1,15 @@
+// zlib's checksums. The package links the C library `libz`, so a program that imports this
+// file needs nothing more than the `zlib` dependency.
+
+extern {
+    fn crc32(crc : u64, buf : *const i8, len : u32) -> u64;
+    fn adler32(adler : u64, buf : *const i8, len : u32) -> u64;
+}
+
+fn crc32_of(text : *const i8, length : u32) -> u64 {
+  return unsafe { crc32(0u64, text, length) };
+}
+
+fn adler32_of(text : *const i8, length : u32) -> u64 {
+  return unsafe { adler32(1u64, text, length) };
+}

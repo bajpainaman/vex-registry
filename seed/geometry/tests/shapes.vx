@@ -1,0 +1,9 @@
+import geometry::shapes;
+
+fn main() -> i32 {
+  if square_area(5i64) != 25i64 { return 1; }
+  if rectangle_area(3i64, 4i64) != 12i64 { return 2; }
+  if rectangle_perimeter(3i64, 4i64) != 14i64 { return 3; }
+  if cube_volume(3i64) != 27i64 { return 4; }
+  return 0;
+}

@@ -1,0 +1,4 @@
+[package]
+name = "intmath"
+version = "1.1.0"
+description = "Integer math: gcd, lcm, powers, square roots and primes"

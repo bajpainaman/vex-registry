@@ -1,0 +1,18 @@
+// Areas, perimeters and volumes with whole-number sides.
+import intmath::powers;
+
+fn square_area(side : i64) -> i64 {
+  return ipow(side, 2i64);
+}
+
+fn rectangle_area(width : i64, height : i64) -> i64 {
+  return width * height;
+}
+
+fn rectangle_perimeter(width : i64, height : i64) -> i64 {
+  return 2i64 * (width + height);
+}
+
+fn cube_volume(side : i64) -> i64 {
+  return ipow(side, 3i64);
+}

@@ -1,0 +1,29 @@
+// Greatest common divisor and least common multiple of two integers.
+
+fn gcd(a : i64, b : i64) -> i64 {
+  let mut x : i64 = a;
+  let mut y : i64 = b;
+  if x < 0i64 {
+    x = 0i64 - x;
+  }
+  if y < 0i64 {
+    y = 0i64 - y;
+  }
+  while y != 0i64 {
+    let r : i64 = x % y;
+    x = y;
+    y = r;
+  }
+  return x;
+}
+
+fn lcm(a : i64, b : i64) -> i64 {
+  if a == 0i64 || b == 0i64 {
+    return 0i64;
+  }
+  let l : i64 = a / gcd(a, b) * b;
+  if l < 0i64 {
+    return 0i64 - l;
+  }
+  return l;
+}

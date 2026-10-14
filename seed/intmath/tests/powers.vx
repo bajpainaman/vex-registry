@@ -1,0 +1,12 @@
+import intmath::powers;
+
+fn main() -> i32 {
+  if ipow(2i64, 10i64) != 1024i64 { return 1; }
+  if ipow(7i64, 0i64) != 1i64 { return 2; }
+  if !is_prime(97i64) { return 3; }
+  if is_prime(91i64) { return 4; }
+  if is_prime(1i64) { return 5; }
+  if isqrt(99i64) != 9i64 { return 6; }
+  if isqrt(100i64) != 10i64 { return 7; }
+  return 0;
+}

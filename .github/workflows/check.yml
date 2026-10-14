@@ -1,0 +1,22 @@
+name: Check a publish
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Only new files, published by their owners
+        run: scripts/check-pull-request.sh "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.user.login }}"
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install vex
+        run: cargo install --locked --git https://github.com/bajpainaman/vex --rev 443fd20
+      - name: Every archive matches its index line
+        run: vex registry verify --registry .

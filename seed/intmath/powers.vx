@@ -1,0 +1,41 @@
+// Whole-number powers and primality.
+
+fn ipow(base : i64, exponent : i64) -> i64 {
+  let mut result : i64 = 1i64;
+  let mut b : i64 = base;
+  let mut e : i64 = exponent;
+  while e > 0i64 {
+    if e % 2i64 == 1i64 {
+      result = result * b;
+    }
+    b = b * b;
+    e = e / 2i64;
+  }
+  return result;
+}
+
+fn is_prime(n : i64) -> bool {
+  if n < 2i64 {
+    return false;
+  }
+  let mut d : i64 = 2i64;
+  while d * d <= n {
+    if n % d == 0i64 {
+      return false;
+    }
+    d = d + 1i64;
+  }
+  return true;
+}
+
+// The whole-number square root: the largest r with r * r <= n. Zero for a negative n.
+fn isqrt(n : i64) -> i64 {
+  if n < 0i64 {
+    return 0i64;
+  }
+  let mut r : i64 = 0i64;
+  while (r + 1i64) * (r + 1i64) <= n {
+    r = r + 1i64;
+  }
+  return r;
+}

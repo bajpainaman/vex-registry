@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vx packages</title>
+  <meta name="description" content="Packages for the Vx programming language, installed with vex.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%234f46e5'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='white' text-anchor='middle'>vx</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#/"><span class="logo">vx</span><span>packages</span></a>
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 0 1 5.96 12.06l4.24 4.24-1.4 1.4-4.24-4.24A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+        <input id="q" type="search" placeholder="Search packages" autocomplete="off" spellcheck="false">
+        <kbd>/</kbd>
+      </label>
+    </div>
+  </header>
+
+  <main class="wrap" id="view" aria-live="polite">
+    <p class="muted">Loading packages…</p>
+  </main>
+
+  <footer class="wrap foot">
+    <span>Every archive is checked against its SHA-256 before it is unpacked. No package code runs when you install.</span>
+    <a href="https://github.com/bajpainaman/vex">vex</a>
+    <a href="https://github.com/bajpainaman/vex-registry">registry on GitHub</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

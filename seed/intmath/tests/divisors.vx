@@ -1,0 +1,9 @@
+import intmath::divisors;
+
+fn main() -> i32 {
+  if gcd(12i64, 18i64) != 6i64 { return 1; }
+  if gcd(0 - 12i64, 18i64) != 6i64 { return 2; }
+  if lcm(4i64, 6i64) != 12i64 { return 3; }
+  if lcm(0i64, 6i64) != 0i64 { return 4; }
+  return 0;
+}

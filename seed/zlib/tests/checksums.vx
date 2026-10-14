@@ -1,0 +1,8 @@
+// 3421780262 and 152961502 are the crc32 and adler32 of "123456789".
+import zlib::checksums;
+
+fn main() -> i32 {
+  if crc32_of("123456789", 9u32) != 3421780262u64 { return 1; }
+  if adler32_of("123456789", 9u32) != 152961502u64 { return 2; }
+  return 0;
+}
